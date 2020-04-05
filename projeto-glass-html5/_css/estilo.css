@@ -1,0 +1,256 @@
+@charset "utf-8";
+@import url(https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap);
+@import url(https://fonts.googleapis.com/css?family=Liu+Jian+Mao+Cao&display=swap);
+@font-face {
+    font-family: 'Fontecabecalho';
+    src: url("../_fonts/computer-font.ttf");
+    font-family: 'Titilium Web', sans-serif;
+    src: url(https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap);
+}
+
+body{
+    background-color: #dddddd;
+    color:  rgba(0, 0, 0, 1);
+    font-family: 'Titillium Web', sans-serif;
+}
+
+
+div#interface {
+    width: 900px;
+    background-color: #ffffff;
+    margin: -20px auto 0px auto;
+    /* Ordem de configuração da margem: cima, direita, baixo esquerda*/
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.568);
+    padding: 10px;
+}/* padding mexe nas margens internas do objeto: se forem iguais finformar o valor uma vez só, se não informar cima, direita, baixo esquerda*/
+
+/*Dessa maneira, sem especificar nada eu consigo transformá-lo em um objeto.*/ 
+header#cabecalho img#icone {
+    position: absolute;
+    left: 950px;
+    top: 70px;
+}
+
+header#cabecalho {
+    border-bottom: 3px #606060 solid;
+    height: 150px;
+    background: url("../_imagens/glass-logo-peq.jpg") no-repeat 0px 90px;
+/*Colocando imagem de fundo no cabeçalho, dizendo para não repetir, assim aparece 1 vez só, e colocando deslocamento lateral 0 e vertical =100*/
+
+}
+header#cabecalho h1 {
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 30pt;
+    color: #606060;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.568);
+    padding: 0px;
+    margin-bottom: 0px; /*Uso somente para arrumar uma margem*/
+}
+
+header#cabecalho h2 {
+    font-family: 'Titillium Web', sans-serif;
+    color: #888888;
+    font-size: 15pt;
+    padding: 0 px;
+    margin-top: 0px;
+
+}
+p {
+    text-align: justify;
+    text-indent: 50px;    
+}
+/* Formatação de imagens com legenda */
+
+/*Formatação da borda em volta da imagem*/
+a {
+    color: #606060;
+    text-decoration: none;
+}
+a:hover {
+    color: black;
+    text-decoration: underline;
+}
+figure.foto-legenda {
+    position: relative;
+    border: 8px solid white;
+    box-shadow: 1px 1px 4px black;
+}
+figure.foto-legenda img {
+    width: 100%;
+    height: 100%;
+}
+/*formatação da legenda da foto "figcaption"*/
+figure.foto-legenda figcaption {
+    opacity: 0;    
+    position: absolute;
+    top:0px;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    transition: opacity 1s;
+}
+
+figure.foto-legenda:hover figcaption {
+    opacity: 1;
+/*Formatação para aparecer e desaparecer da legenda sobre a imagem(hover)*/
+}
+/*Formatação do menu - Criando menu flutuante */
+
+nav#menu {
+    display: block; /*transforma o menu em um bloco*/
+}
+nav#menu ul {
+    list-style-type: none;/* Tirou os marcadores*/
+    text-transform: uppercase;/*Colocou em letras maiúsculas*/
+    position: absolute; /*Para que ele possa passar em cima dos objetos*/
+    top: -20px;
+    left: 500px;
+}
+nav#menu li {
+    display: inline-block;
+    background-color: #dddddd;
+    padding: 10px;/*Controla espaços dentro do objeto*/
+    margin: 2px; /*Controla espaços entre os objetos*/
+    transition: background-color 1s; 
+}
+nav#menu li:hover {/*Para controlar o escurecimento da cor, transição*/
+    background-color: #606060;
+}
+nav#menu h1 {
+    display: none;
+}
+nav#menu a { /*Código para alteração de cores com links presentes.*/
+    color: black;
+    text-decoration: none;
+}
+nav#menu a:hover {
+    color: white;
+    text-decoration: underline;
+}
+section#corpo {
+    display: block;
+    width: 450px;
+    float: left;
+    border-right: 1px solid #606060;
+    padding-right: 15px;
+    
+}
+header#cabecalho-artigo h1 {
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 20pt;
+    color: #606060;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+header#cabecalho-artigo h2.teste {
+    font-size: 13pt;
+    color: #cecece;
+    background-color: white;
+    margin: 0px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+header#cabecalho-artigo h3 { 
+    font-size: 12pt;
+    color: #606060;
+}
+
+.direita {
+    text-align: right;
+    margin-top: 0px;
+}
+
+article#noticia-principal h2 {
+    font-size: 12pt;
+    color: #606060;
+    background-color: #dddddd;
+    padding: 5px 0px 5px 10px;
+    margin: 10px 0px 10px 0px;
+
+}
+
+table#tabelaspec caption {
+    color: #888888;
+    font-size: 15pt;
+    font-weight: bolder;
+}
+table#tabelaspec caption span{
+    display: block;
+    float: right;
+    color: black;
+    font-size: 7pt;
+    margin-top: 20px;
+}
+table#tabelaspec {
+    border: 1px solid #606060;
+    border-spacing: 0px;
+    margin-left: auto;
+    margin-right: auto;
+}
+table#tabelaspec td {/* Dados da rabela*/
+    border: 1px solid #606060;
+    padding: 10px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+table#tabelaspec td.ce {
+    color: #ffffff;
+    background-color: #606060;
+    vertical-align: top;
+    font-weight: bold;
+}
+
+table#tabelaspec td.cd {
+    color: black;
+    background-color: #cecece; 
+
+}
+
+video#one-day2 {
+    display: block;
+    width: 380px;
+    margin: auto auto auto 30px;
+    padding: 10px;
+}
+
+aside#lateral {
+    display: block;
+    width: 400px;
+    float: right;
+    background-color: #dddddd;
+    padding: 0px 10px 0px 10px;
+    margin-top: 20px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.568);
+}
+
+aside#lateral h1 { 
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 20pt;
+    color: #606060;
+    margin-top: 0px;
+
+}
+aside#lateral h2.aside {
+    background-color: #606060;
+    font-size: 12pt;
+    color: white;
+    padding: 5px; 
+
+}
+
+
+footer#rodape {
+    clear: both;
+    border-top: 1px solid #606060;
+ 
+}
+footer#rodape p {
+    text-align: center;
+}
+
